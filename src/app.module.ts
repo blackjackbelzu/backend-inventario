@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 import { UsersModule } from './modules/users/users.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { User } from './modules/users/entities/user.entity';
 
 @Module({
   imports: [ConfigModule.forRoot(),

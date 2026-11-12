@@ -1,12 +1,12 @@
 import {DataSource} from "typeorm"
 
-export default new DataSource({
-    type: 'postgres',
-    host: 'localhost',
-    port: 5434,
-    username: 'postgres',
-    password: 'postgresql',
-    database: 'bd_inventario',
-    entities:['src/**/*.entity.ts'],
-    migrations:['src/database/migrations/*.ts']
-});
+TypeOrmModule.forRoot({
+  type: 'postgres',
+  host: 'localhost',
+  port: 5434,
+  username: 'postgres',
+  password: 'postgresql',
+  database: 'bd_inventario',
+  entities: [User],
+  synchronize: false,
+}),
